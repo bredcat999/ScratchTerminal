@@ -5,11 +5,11 @@ ver. 2022.10.25 (Early Release)
 '''
 
 import scratchattach as scratch3
-import tkinter as tk
 
+username = input("Username: ")
 
 print("Username and password please:")
-session = scratch3.login(input(), input())
+session = scratch3.login(username, input())
 
 #Splash Text
 print("You have been signed in.")
@@ -37,6 +37,8 @@ while 1 == 1 :
     #gets following count
     print("Following:")
     print(user.following_count())
+    
+    user.post_comment(username + " has searched you on ScratchTerminal, a program built using ScratchAttach made by @BreadcatGames.", parent_id="", commentee_id="") 
     
     print("Would you like to leave a comment? y/n")
     
